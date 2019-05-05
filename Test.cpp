@@ -68,13 +68,7 @@ int main() {
 		.CHECK_OUTPUT(calculateBullAndPgia("1234","3241"), "1,3")
 		.CHECK_OUTPUT(calculateBullAndPgia("1234","1245"), "2,1")
 		.CHECK_OUTPUT(calculateBullAndPgia("1234","2134"), "2,2")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","1235"), "3,1")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","5678"), "0,0")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","5678"), "0,0")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","5678"), "0,0")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","5678"), "0,0")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","5678"), "0,0")
-		.CHECK_OUTPUT(calculateBullAndPgia("1234","5678"), "0,0")
+		.CHECK_OUTPUT(calculateBullAndPgia("1234","1235"), "3,0")
 		;
 
 		testcase.setname("Play with dummy choosers and guessers")

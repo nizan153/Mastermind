@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <iostream>
 #include <set>
+#include <unordered_set>
 #include "calculate.hpp"
 #include "Guesser.hpp"
 
@@ -13,8 +14,11 @@ namespace bullpgia {
     class SmartGuesser : public Guesser {
         private:
             std::set<std::string> permSet;
+            std::unordered_set<std::string> set1;
+            std::unordered_set<std::string> set2;
             std::string lastGuess;
             void initList();
+            string numToGuess(int num, int length);
         public: 
             void startNewGame(uint length) override;
             void learn(std::string s) override;

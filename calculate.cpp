@@ -6,7 +6,7 @@
 
 string calculateBullAndPgia(const string chosen, const string guess) {
     if(chosen.length() != guess.length()) {
-        throw "Guess too long/short";
+        return "0,0";
     }
     int bull = 0;
     int pgia = 0;

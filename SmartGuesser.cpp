@@ -6,7 +6,9 @@ using namespace std;
 void SmartGuesser::startNewGame(uint length) {
     set1.clear();
     this->length = length;
-    initList();
+    for(uint i = 0; i < pow(10, length); i++) {
+        set1.insert(numToGuess(i,length));
+    }
 }
 
 void SmartGuesser::learn(string str) {
@@ -33,11 +35,6 @@ string SmartGuesser::guess() {
     return lastGuess;
 }
 
-void SmartGuesser::initList() {
-    for(uint i = 0; i < pow(10, length); i++) {
-        set1.insert(numToGuess(i,length));
-    }
-}
 string SmartGuesser::numToGuess(int num, int length){
     string guess = to_string(num);
     int numOfZeros = length - guess.length();

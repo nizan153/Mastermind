@@ -5,9 +5,7 @@
 #include "SmartGuesser.hpp"
 
 string calculateBullAndPgia(const string chosen, const string guess) {
-    if(chosen.length() != guess.length()) {
-        return "0,0";
-    }
+    
     int bull = 0;
     int pgia = 0;
 

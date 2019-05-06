@@ -13,8 +13,8 @@ string calculateBullAndPgia(const string chosen, const string guess) {
     for(int i = 0; i < chosen.length(); i++) {
         if(guess.at(i) == chosen.at(i)) { bull++; }
         else {
-            if(count[guess.at(i)-'0']++ != 0) { pgia++; }
-            if(count[chosen.at(i)-'0']-- != 0) { pgia++; }
+            if(count[guess.at(i)-'0']++ < 0) { pgia++; }
+            if(count[chosen.at(i)-'0']-- > 0) { pgia++; }
             
         }
     }

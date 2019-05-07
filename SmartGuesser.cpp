@@ -7,7 +7,7 @@ void SmartGuesser::startNewGame(uint length) {
     set1.clear();
     this->length = length;
     for(uint i = 0; i < pow(10, length); i++) {
-        set1.insert(numToGuess(i,length));
+        set1.insert(numOfPerms(i,length));
     }
 }
 
@@ -35,7 +35,7 @@ string SmartGuesser::guess() {
     return lastGuess;
 }
 
-string SmartGuesser::numToGuess(int num, int length){
+string SmartGuesser::numOfPerms(int num, int length){
     string guess = to_string(num);
     int numOfZeros = length - guess.length();
     for (int i = 0; i < numOfZeros; i++) {

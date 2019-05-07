@@ -15,8 +15,7 @@ namespace bullpgia {
             std::unordered_set<std::string> set1;
             std::unordered_set<std::string> set2;
             std::string lastGuess;
-            void initList();
-            string numToGuess(int num, int length);
+            string numOfPerms(int num, int length);
         public: 
             void startNewGame(uint length) override;
             void learn(std::string s) override;
